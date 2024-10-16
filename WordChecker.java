@@ -1,7 +1,13 @@
+import java.util.ArrayList;
+
 public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
-    private ArrayList<String> wordList;
-
+    public WordChecker(ArrayList<String> list){
+        wordList = list; 
+        wordList = new ArrayList<String>(); 
+        
+    }
+    private ArrayList<String> wordList; 
     /**
      * Returns true if each element of wordList (except the first) contains the
      * previous
@@ -22,5 +28,6 @@ public class WordChecker {
      * wordList.
      */
     public ArrayList<String> createList(String target) {
-        /* to be implemented in part (b) */ }
+        /* to be implemented in part (b) */
+     }
 }
