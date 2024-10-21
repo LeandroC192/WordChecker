@@ -4,10 +4,10 @@ public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
     public WordChecker(ArrayList<String> list){
         wordList = list; 
-        wordList = new ArrayList<String>(); 
         
     }
     private ArrayList<String> wordList; 
+    wordList = new ArrayList<String>(); 
     /**
      * Returns true if each element of wordList (except the first) contains the
      * previous
