@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 
 public class WordChecker {
+    private ArrayList<String> wordList;
     /** Initialized in the constructor and contains no null elements */
-    public WordChecker(ArrayList<String> list){
-        wordList = list; 
-        
+    public WordChecker() {
+        wordList = new ArrayList<String>();
     }
-    private ArrayList<String> wordList; 
-    wordList = new ArrayList<String>(); 
+    public WordChecker(ArrayList<String> list) {
+        wordList = list;
+    }
     /**
      * Returns true if each element of wordList (except the first) contains the
      * previous
@@ -16,8 +17,14 @@ public class WordChecker {
      * Postcondition: wordList is unchanged.
      */
     public boolean isWordChain() {
-        /* to be implemented in part (a) */ }
-
+        for(int i =1; i < wordList.size(); i++){
+            String after = wordList.get(i);
+            String before = wordList.get(i - 1);
+            if(after.indexOf(before)>0) return false;
+        }
+        return true;
+        /* to be implemented in part (a) */ 
+    }
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
      * with target, as described in part (b). Each element of the returned ArrayList
@@ -28,6 +35,12 @@ public class WordChecker {
      * wordList.
      */
     public ArrayList<String> createList(String target) {
-        /* to be implemented in part (b) */
-     }
+    /* to be implemented in part (b) */ 
+    ArrayList<String> list = new ArrayList<String>();
+    for (String s : wordList) {
+        if(s.indexOf(target) == 0)
+        list.add(s.substring(target.length()));
+        }
+    return list;
+    }
 }
