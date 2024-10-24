@@ -9,14 +9,18 @@ public class Main {
         words.add("band");
         words.add("abandon");
         System.out.println(w);
-        WordChecker x = new WordChecker(words);
-        words.add("to");
-        words.add("too");
-        words.add("stool");
-        words.add("tools");
+        System.out.println(w.isWordChain());
+        System.out.println(w.createList("b"));
+ 
+        ArrayList<String> word = new ArrayList<String>(); 
+        WordChecker x = new WordChecker(word);
+        word.add("to");
+        word.add("too");
+        word.add("stool");
+        word.add("tools");
         System.out.println(x);
         System.out.println(x.isWordChain());
-        System.out.println(w.isWordChain());
+        System.out.println(x.createList("to"));
     }
     
 }
