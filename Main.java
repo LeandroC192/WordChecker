@@ -21,6 +21,19 @@ public class Main {
         System.out.println(x);
         System.out.println(x.isWordChain());
         System.out.println(x.createList("to"));
+
+        ArrayList<String> wordsTwo = new ArrayList<String>(); 
+        WordChecker y = new WordChecker(wordsTwo);
+        wordsTwo.add("catch");
+        wordsTwo.add("bobcat");
+        wordsTwo.add("catchacat");
+        wordsTwo.add("cat");
+        wordsTwo.add("at");
+        System.out.println(y);
+        System.out.println(y.isWordChain());
+        System.out.println(y.createList("cat"));
+        System.out.println(y.createList("catch"));
+        System.out.println(y.createList("dog"));
+
     }
-    
 }
